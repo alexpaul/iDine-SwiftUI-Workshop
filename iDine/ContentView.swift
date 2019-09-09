@@ -15,11 +15,13 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List(menu) { item in
-        Image(item.thumbnailImage)
-        VStack(alignment: .leading) {
-          Text(item.name)
-            .font(.headline)
-          Text("$\(item.price)")
+        NavigationLink(destination: DetailView(menuItem: item)) {
+          Image(item.thumbnailImage)
+          VStack(alignment: .leading) {
+            Text(item.name)
+              .font(.headline)
+            Text("$\(item.price)")
+          }
         }
       }
       .navigationBarTitle("iDine")
