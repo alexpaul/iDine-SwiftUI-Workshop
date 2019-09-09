@@ -13,7 +13,12 @@ struct DetailView: View {
   var menuItem: MenuItem
   
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+    VStack {
+      Image(menuItem.mainImage)
+      Text(menuItem.name)
+      Text(menuItem.description)
+      Spacer()
+    }
   }
 }
 
