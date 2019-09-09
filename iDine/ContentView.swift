@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+  
   let menu = Bundle.main.decode([MenuItem].self, from: "menu.json")
   
   var body: some View {
