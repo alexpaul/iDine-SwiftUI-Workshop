@@ -14,6 +14,7 @@ struct ContentView: View {
   
   var body: some View {
     List(menu) { item in
+      Image(item.thumbnailImage)
       Text(item.name)
     }
   }
