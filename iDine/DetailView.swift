@@ -13,10 +13,14 @@ struct DetailView: View {
   var menuItem: MenuItem
   
   var body: some View {
-    VStack {
+    VStack(spacing: 0) {
       Image(menuItem.mainImage)
       Text(menuItem.name)
+        .font(.largeTitle)
+        .padding(.top)
       Text(menuItem.description)
+        .padding(.leading)
+        .padding(.trailing)
       Spacer()
     }
   }
