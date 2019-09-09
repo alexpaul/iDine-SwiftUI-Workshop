@@ -20,6 +20,8 @@ struct OrderView: View {
         }
         .onDelete(perform: delete)
       }
+      .navigationBarTitle("Orders")
+      .navigationBarItems(trailing: EditButton())
     }
   }
   
