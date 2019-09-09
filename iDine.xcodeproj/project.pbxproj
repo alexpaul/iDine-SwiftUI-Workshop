@@ -19,6 +19,7 @@
 		516DB46F231C7FE600C4827F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DB46E231C7FE600C4827F /* Order.swift */; };
 		516DB471231C82D200C4827F /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DB470231C82D200C4827F /* Favorites.swift */; };
 		5708107E2325F70C00BB9E67 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5708107D2325F70C00BB9E67 /* AppView.swift */; };
+		570810802325F83400BB9E67 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5708107F2325F83400BB9E67 /* OrderView.swift */; };
 		57D1DE662325E98100840DB9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1DE652325E98100840DB9 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		516DB46E231C7FE600C4827F /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		516DB470231C82D200C4827F /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		5708107D2325F70C00BB9E67 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		5708107F2325F83400BB9E67 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		57D1DE652325E98100840DB9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				516DB46B231C76C100C4827F /* MenuItem.swift */,
 				57D1DE652325E98100840DB9 /* DetailView.swift */,
 				5708107D2325F70C00BB9E67 /* AppView.swift */,
+				5708107F2325F83400BB9E67 /* OrderView.swift */,
 				516DB46E231C7FE600C4827F /* Order.swift */,
 				516DB470231C82D200C4827F /* Favorites.swift */,
 				516DB468231C766F00C4827F /* Bundle-Decodable.swift */,
@@ -177,6 +180,7 @@
 				516DB471231C82D200C4827F /* Favorites.swift in Sources */,
 				516DB469231C766F00C4827F /* Bundle-Decodable.swift in Sources */,
 				516DB46D231C76C100C4827F /* MenuItem.swift in Sources */,
+				570810802325F83400BB9E67 /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

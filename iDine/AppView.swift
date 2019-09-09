@@ -16,6 +16,11 @@ struct AppView: View {
           Image(systemName: "1.circle")
           Text("Menu")
       }
+      OrderView()
+        .tabItem {
+          Image(systemName: "2.circle")
+          Text("Orders")
+      }
     }
   }
 }
