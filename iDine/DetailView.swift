@@ -33,7 +33,6 @@ struct DetailView: View {
         .padding(.bottom)
       Button(action: {
         self.order.items.append(self.menuItem)
-        print("There are \(self.order.items.count) in your order")
       }) {
         Text("Add to order")
       }

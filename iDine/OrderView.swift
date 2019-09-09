@@ -18,8 +18,13 @@ struct OrderView: View {
         ForEach(order.items) { item in
           Text(item.name)
         }
+        .onDelete(perform: delete)
       }
     }
+  }
+  
+  func delete(offsets: IndexSet) {
+    order.items.remove(atOffsets: offsets)
   }
 }
 
