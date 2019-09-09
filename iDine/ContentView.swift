@@ -13,13 +13,16 @@ struct ContentView: View {
   let menu = Bundle.main.decode([MenuItem].self, from: "menu.json")
   
   var body: some View {
-    List(menu) { item in
-      Image(item.thumbnailImage)
-      VStack(alignment: .leading) {
-        Text(item.name)
-          .font(.headline)
-        Text("$\(item.price)")
+    NavigationView {
+      List(menu) { item in
+        Image(item.thumbnailImage)
+        VStack(alignment: .leading) {
+          Text(item.name)
+            .font(.headline)
+          Text("$\(item.price)")
+        }
       }
+      .navigationBarTitle("iDine")
     }
   }
 }
