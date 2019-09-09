@@ -15,7 +15,7 @@ struct ContentView: View {
   var body: some View {
     List(menu) { item in
       Image(item.thumbnailImage)
-      VStack {
+      VStack(alignment: .leading) {
         Text(item.name)
         Text("$\(item.price)")
       }
