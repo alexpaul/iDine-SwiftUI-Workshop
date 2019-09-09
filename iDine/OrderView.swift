@@ -12,6 +12,8 @@ struct OrderView: View {
   
   @EnvironmentObject var order: Order
   
+  @State private var showingAlert = false
+  
   var body: some View {
     NavigationView {
       List {
@@ -19,7 +21,18 @@ struct OrderView: View {
           Text(item.name)
         }
         .onDelete(perform: delete)
+        
+        Button(action: {
+          self.showingAlert = true
+        }) {
+          Text("Place order")
+        }.alert(isPresented: $showingAlert) {
+          Alert(title: Text("Thank you"),
+                message: Text("Your order has been placed."),
+                dismissButton: .default(Text("OK")))
+        }
       }
+        
       .navigationBarTitle("Orders")
       .navigationBarItems(trailing: EditButton())
     }
