@@ -12,6 +12,8 @@ struct DetailView: View {
   
   var menuItem: MenuItem
   
+  @EnvironmentObject var order: Order
+  
   var body: some View {
     VStack(spacing: 0) {
       ZStack(alignment: .bottomTrailing) {
@@ -28,6 +30,13 @@ struct DetailView: View {
       Text(menuItem.description)
         .padding(.leading)
         .padding(.trailing)
+        .padding(.bottom)
+      Button(action: {
+        self.order.items.append(self.menuItem)
+        print("There are \(self.order.items.count) in your order")
+      }) {
+        Text("Add to order")
+      }
       Spacer()
     }
   }
