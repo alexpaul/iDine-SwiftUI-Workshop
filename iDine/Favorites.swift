@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-class Favorites {
-    private(set) var items = [String]()
+class Favorites: ObservableObject {
+    @Published private(set) var items = [String]()
 
     func contains(_ item: MenuItem) -> Bool {
         return items.contains(item.name)

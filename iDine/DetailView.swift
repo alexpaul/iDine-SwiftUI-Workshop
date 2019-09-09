@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+  @EnvironmentObject var order: Order
+  @EnvironmentObject var favorites: Favorites
   
   var menuItem: MenuItem
-  
-  @EnvironmentObject var order: Order
   
   var body: some View {
     VStack(spacing: 0) {
@@ -38,11 +39,20 @@ struct DetailView: View {
       }
       Spacer()
     }
+    .navigationBarItems(trailing: Button(action: {
+      self.favorites.toggle(self.menuItem)
+    }) {
+      Image(systemName: self.favorites.contains(self.menuItem) ? "heart.fill" : "heart")
+        .font(.system(size: 29))
+        .foregroundColor(.red)
+    })
   }
 }
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(menuItem: MenuItem.example)
+    NavigationView {
+      DetailView(menuItem: MenuItem.example).environmentObject(Order())
+    }
   }
 }
