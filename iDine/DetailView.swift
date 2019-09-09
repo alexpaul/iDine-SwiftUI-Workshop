@@ -14,7 +14,13 @@ struct DetailView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      Image(menuItem.mainImage)
+      ZStack {
+        Image(menuItem.mainImage)
+        Text("Photo: \(menuItem.photoCredit)")
+          .padding(8)
+          .foregroundColor(.white)
+          .background(Color.black)
+      }
       Text(menuItem.name)
         .font(.largeTitle)
         .padding(.top)
